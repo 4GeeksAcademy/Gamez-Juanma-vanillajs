@@ -22,16 +22,17 @@ window.onload = function() {
     let positionAction = Math.floor(Math.random() * action.length);
     let positionWhat = Math.floor(Math.random() * what.length);
     let positionWhen = Math.floor(Math.random() * when.length);
-    let completeExcuse =
+    return (
       who[positionWho] +
       " " +
       action[positionAction] +
       " " +
       what[positionWhat] +
       " " +
-      when[positionWhen];
+      when[positionWhen]
+    );
   }
   document.querySelector("#excuseGenerator").addEventListener("click", () => {
-    document.querySelector("#excuse").innerHTML = excuseGenerator();
+    document.querySelector("#hola").innerHTML = excuseGenerator();
   });
 };
